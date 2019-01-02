@@ -40,7 +40,7 @@ open class Analytics {
   
     - returns: A beautiful, brand-new, custom built Analytics client just for you. ❤️
   */
-  open static func create(_ writeKey: String) -> Analytics {
+    public static func create(_ writeKey: String) -> Analytics {
     let executor = SerialExecutor(name:"com.segment.executor." + writeKey)
     let queue = Array<Dictionary<String, AnyObject>>()
     return Analytics(writeKey: writeKey, queue: queue, executor: executor)

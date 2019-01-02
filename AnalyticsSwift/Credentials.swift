@@ -32,7 +32,7 @@ open class Credentials {
   }
   
   /** Returns an auth credential for the Basic scheme. Exposed for testing. */
-  open static func basic(_ username: String, password: String) -> String {
+    public static func basic(_ username: String, password: String) -> String {
     return String(format: "Basic %@", base64(String(format: "%@:%@", username, password)))
   }
 
